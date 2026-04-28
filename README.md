@@ -71,6 +71,12 @@ A homepage será composta pelos seguintes elementos:
 ### PAGINA PRODUTO
 <img width="231" height="532" alt="4" src="https://github.com/user-attachments/assets/d8f52326-f1d4-4f52-ac5d-56aa4d2d166e" />
 
+-------------------------------------------------
+
+### FORMULÁRIO DE CONTATO
+<img width="232" height="531" alt="6" src="https://github.com/user-attachments/assets/27abc52e-f846-46a7-809e-35be991e6ff5" />
+
+
 
 
 
