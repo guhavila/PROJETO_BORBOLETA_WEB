@@ -38,6 +38,7 @@ A homepage será composta pelos seguintes elementos:
   - Botão de ação (CTA), como "Ver produtos" ou "Comprar agora"
 
 ### 3. Seção de Categorias
+- Retiramos o Bloco de Mais Vendidos e deixamos só as categorias dos produtos vendidos
 - Bloco logo abaixo do banner principal
 - Exibe as principais categorias de produtos
 - Cada categoria será representada por:
@@ -51,3 +52,4 @@ A homepage será composta pelos seguintes elementos:
 - Estrutura de rota:
 
 ### Rotas Simples
+- No hamburguer no inicio da pagina (header) e no footer teremos um rota simples para um formulário de contate-nos
