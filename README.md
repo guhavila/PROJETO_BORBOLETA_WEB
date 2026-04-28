@@ -76,7 +76,9 @@ A homepage será composta pelos seguintes elementos:
 ### FORMULÁRIO DE CONTATO
 <img width="232" height="531" alt="6" src="https://github.com/user-attachments/assets/27abc52e-f846-46a7-809e-35be991e6ff5" />
 
+-------------------------------------------------
 
-
+### WIREFRAME COMPLETO
+<img width="1920" height="1080" alt="102659 (1) (1)" src="https://github.com/user-attachments/assets/c9dbfac7-38be-44c9-ab88-68303d413efc" />
 
 
