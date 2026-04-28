@@ -59,7 +59,6 @@ A homepage será composta pelos seguintes elementos:
 
 ### HOME PAGE WIREFRAME
 <img width="233" height="332" alt="header" src="https://github.com/user-attachments/assets/7b9ee633-41a3-47be-9fa9-c102d30056e3" />
-<img width="202" height="127" alt="footer" src="https://github.com/user-attachments/assets/fd53399e-9968-40e2-b669-b48d9384c654" />
 <img width="203" height="643" alt="categorias" src="https://github.com/user-attachments/assets/24a589a6-1e7a-4265-bbae-ba4d5a281246" />
-
+<img width="202" height="127" alt="footer" src="https://github.com/user-attachments/assets/fd53399e-9968-40e2-b669-b48d9384c654" />
 
