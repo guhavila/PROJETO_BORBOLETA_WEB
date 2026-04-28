@@ -66,5 +66,11 @@ A homepage será composta pelos seguintes elementos:
 ### CATEGORIAS WIREFRAME
 <img width="230" height="622" alt="3" src="https://github.com/user-attachments/assets/cfef5ce4-5153-4f1b-a89e-d080eb0ba45c" />
 
+-------------------------------------------------
+
+### PAGINA PRODUTO
+<img width="231" height="532" alt="4" src="https://github.com/user-attachments/assets/d8f52326-f1d4-4f52-ac5d-56aa4d2d166e" />
+
+
 
 
