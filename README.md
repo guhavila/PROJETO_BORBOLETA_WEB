@@ -50,6 +50,7 @@ A homepage será composta pelos seguintes elementos:
 
 ### Rotas Dinâmicas de Categorias
 - Estrutura de rota:
+- Cada categoria irá direcionar para uma pagina de categorias, tendo em vista que todas serão da mesma forma, só alternando o conteúdo
 
 ### Rotas Simples
 - No hamburguer no inicio da pagina (header) e no footer teremos um rota simples para um formulário de contate-nos
