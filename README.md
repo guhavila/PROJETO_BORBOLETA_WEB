@@ -27,20 +27,20 @@ A homepage será composta pelos seguintes elementos:
 - Localizado no topo da página
 - Contém:
   - Logo da loja
-  - Menu de navegação
-  - Possível campo de busca
+  - Hamburguer 
   - Ícone de carrinho
 
 ### 2. Banner Principal (Hero)
 - Uma imagem grande em destaque
 - Pode conter:
   - Chamada promocional
-  - Botão de ação (CTA), como "Ver produtos" ou "Comprar agora"
+  - Imagem Chamativa e Ótima Qualidade
+  - Seta direcionadora para o bloco de baixo
 
 ### 3. Seção de Categorias
 - Retiramos o Bloco de Mais Vendidos e deixamos só as categorias dos produtos vendidos
 - Bloco logo abaixo do banner principal
-- Exibe as principais categorias de produtos
+- Exibe as 6 principais categorias de produtos
 - Cada categoria será representada por:
   - Imagem
   - Nome da categoria
