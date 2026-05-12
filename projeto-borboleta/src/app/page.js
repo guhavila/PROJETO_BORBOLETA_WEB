@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import Carousel from "@/components/Carousel";
+import Carrousel from "@/components/Carrousel";
 import ProductCard from "@/components/ProductCard";
 
 export default function Home() {
@@ -8,7 +8,7 @@ export default function Home() {
       <Header />
 
       <main>
-        <Carousel />
+        <Carrousel />
 
         <section id="popular">
           <section className="items">
