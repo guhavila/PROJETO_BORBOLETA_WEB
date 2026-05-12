@@ -55,6 +55,9 @@ A homepage será composta pelos seguintes elementos:
 ### Rotas Simples
 - No hamburguer no inicio da pagina (header) e no footer teremos um rota simples para um formulário de contate-nos
 
+### Migração de JS para New JS
+- Pegamos o html e js do site do projeto Lagarta e migramos para o arquivo *page.js* para sintonizar o site com os recursos que o New js oferece
+- Em seguida passamos o CSS para o arquivo *page.module.css*
 -------------------------------------------------
 
 ### HOME PAGE WIREFRAME
