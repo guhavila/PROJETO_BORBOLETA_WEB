@@ -8,7 +8,7 @@ const slidesData = [
   { href: "/formulario.html", src: "/img/slide_conheca.png", alt: "Formulário" },
 ];
 
-export default function Carousel() {
+export default function Carrousel() {
   const [index, setIndex] = useState(0);
 
   const avancar = () => setIndex((index + 1) % slidesData.length);
