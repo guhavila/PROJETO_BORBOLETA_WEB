@@ -1,6 +1,6 @@
-import Header from "@/components/Header";
-import Carrousel from "@/components/Carrousel";
-import ProductCard from "@/components/ProductCard";
+import Header from "@/app/components/Header";
+import Carrousel from "@/app/components/Carrousel";
+import ProductCard from "@/app/components/ProductCard";
 
 export default function Home() {
   return (
