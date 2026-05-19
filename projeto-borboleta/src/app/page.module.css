@@ -12,46 +12,7 @@ body {
     background-color:rgb(254, 249, 236);
 }
 
-header {
-    margin: 5px;
-    display: flex;
-    padding: 0 30px;
-    background-color: rgb(254, 249, 236);
-    justify-content: space-between;
-    align-items: center;
-}
 
-header nav {
-    display: flex;
-    justify-content: space-around;
-    margin: 10px;
-}
-
-header nav a {
-    margin: 10px;
-    text-decoration: none;
-    color: black;
-}
-
-header nav a:hover {
-    text-decoration: underline;
-    color: rgb(112, 112, 112);
-}
-
-.menu {
-    display: none;
-    background: transparent;
-    border: none;
-    font-size: 30px;
-    cursor: pointer;
-    color: black;
-    padding: 10px;
-}
-
-header img {
-    width: 30%;
-    min-width: 150px;
-}
 
 #carrosel {
     position: relative;

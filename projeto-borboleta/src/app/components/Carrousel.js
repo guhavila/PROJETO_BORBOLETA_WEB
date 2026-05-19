@@ -3,9 +3,9 @@ import { useState } from "react";
 import Image from "next/image";
 
 const slidesData = [
-  { href: "/kits.html", src: "/img/Tudo para sua instalação.png", alt: "Kits" },
-  { href: "/utensilios.html", src: "/img/slide_utencilios.png", alt: "Utensílios" },
-  { href: "/formulario.html", src: "/img/slide_conheca.png", alt: "Formulário" },
+  { href: "/", src: "/Tudo para sua instalação.png", alt: "Kits" },
+  { href: "/", src: "/slide_utencilios.png", alt: "Utensílios" },
+  { href: "/", src: "/slide_conheca.png", alt: "Formulário" },
 ];
 
 export default function Carrousel() {
