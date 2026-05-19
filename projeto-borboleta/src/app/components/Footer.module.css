@@ -1,0 +1,29 @@
+#Footer {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+
+#Footer h3 {
+    margin-bottom: 15px;
+    color: #ffcc00;
+}
+
+#Footer p {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+
+@media (max-width: 800px) {
+    #Footer {
+        flex-direction: column;
+        text-align: center; 
+        gap: 20px;
+    }
+}

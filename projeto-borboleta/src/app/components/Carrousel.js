@@ -1,9 +1,10 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import styles from "./Carrousel.module.css";
 
 const slidesData = [
-  { href: "/", src: "/Tudo para sua instalação.png", alt: "Kits" },
+  { href: "/", src: "/Tudo_para_sua_instalacao.png", alt: "Kits" },
   { href: "/", src: "/slide_utencilios.png", alt: "Utensílios" },
   { href: "/", src: "/slide_conheca.png", alt: "Formulário" },
 ];
@@ -15,7 +16,7 @@ export default function Carrousel() {
   const voltar = () => setIndex((index - 1 + slidesData.length) % slidesData.length);
 
   return (
-    <section id="carrosel" style={{ overflow: "hidden", position: "relative" }}>
+    <section id={styles.carrosel}>
       <section 
         id="slides" 
         style={{ 
