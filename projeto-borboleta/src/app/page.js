@@ -24,7 +24,7 @@ export default function Home() {
           <section className="items">
             <h2>Categorias</h2>
             <div className="container-items">
-              <ProductCard link="/camping.html" imgSrc="/fogao.webp" title="Fogões Camping" />
+              <ProductCard link="/produtos/fogoes" imgSrc="/fogao.webp" title="Fogões Camping" />
               <ProductCard link="/regulador.html" imgSrc="/Regulador.webp" title="Reguladores" />
               <ProductCard link="/central.html" imgSrc="/Central.png" title="Central de gás" />
             </div>
