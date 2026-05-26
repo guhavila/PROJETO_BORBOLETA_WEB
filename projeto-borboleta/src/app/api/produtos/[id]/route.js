@@ -8,4 +8,4 @@ export async function GET(request, context) {
     const produto = db.produtos.find((p) => p.id === numeroID);
 
     return Response.json(produto);
-}
+} 

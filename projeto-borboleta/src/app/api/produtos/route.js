@@ -4,3 +4,4 @@ import { db } from "@/lib/db.js";
 export async function GET() {
     return Response.json(db.produtos);
 }
+ 
