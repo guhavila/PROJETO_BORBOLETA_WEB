@@ -19,7 +19,6 @@
     font-size: 0.95rem;
 }
 
-
 @media (max-width: 800px) {
     #Footer {
         flex-direction: column;
