@@ -25,15 +25,27 @@ export default function Categorias({ params }) {
         carregarProdutos()
     }, []);
 
-    const produtosDaCategoria = produtos.filter(
-        (produto) => produto.categoriaId === categoriaId
-    );
+    let produtosDaCategoria;
+    let categoria;
+
+    if (categoriaId === "todos") {
+        produtosDaCategoria = produtos;
+        categoria = {id: "todos",
+                        nome: "Todos os Produtos"};
+    } else {
+        produtosDaCategoria = produtos.filter(
+            (produto) => produto.categoriaId === categoriaId
+        );
+        categoria = categorias.find((cat) => cat.id === categoriaId);
+
+    }
     
-
-    const categoria = categorias.find((cat) => cat.id === categoriaId);
-
     if (carregando) {
         return <h1 style={{ padding: "2rem" }}>Carregando...</h1>
+    }
+
+    if (!categoria) {
+        return <h1 style={{ padding: "2rem", textAlign: "center" }}>Categoria não encontrada!</h1>
     }
 
     return(

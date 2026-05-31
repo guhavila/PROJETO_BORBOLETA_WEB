@@ -24,7 +24,7 @@ export default function Header() {
 
       <nav id={styles.navMenu} className={menuAtivo ? styles.ativo : ""}>
         <Link href="/">Home</Link>
-        <Link href="/produtos">Produto</Link>
+        <Link href="/produtos/todos">Produto</Link>
       </nav>
     </header>
   );
