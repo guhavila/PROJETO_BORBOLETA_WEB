@@ -1,5 +1,5 @@
 
-#Header {
+.Header {
     margin: 5px;
     display: flex;
     padding: 0 30px;
@@ -28,7 +28,7 @@
 .linha {
   width: 100%;
   height: 3px;
-  background-color: #333; /* Cor do ícone (altere como quiser) */
+  background-color: #333; 
   border-radius: 5px;
   transition: all 0.3s ease-in-out;
 }
@@ -43,17 +43,17 @@
     padding: 10px;
 }
 
-#Header img {
+.Header img {
     width: 30%;
     min-width: 150px;
 }
 
 @media (max-width: 800px) {
-    #Header {
+    .Header {
         position: relative;
     }
 
-    #Header a img {
+    .Header a img {
         min-width: 150px;
         width: 150px;
         margin-bottom: 0;
@@ -70,7 +70,7 @@
         cursor: pointer;
         color:black;
         padding: 0;
-        z-index: 10; /* Garante que o botão fique acima do menu quando aberto */
+        z-index: 10; 
     }
    
     #navMenu {

@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import styles from "./Carrousel.module.css";
+import Link from "next/link";
 
 const slidesData = [
   { href: "/", src: "/Tudo_para_sua_instalacao.png", alt: "Kits" },
@@ -16,24 +17,41 @@ export default function Carrousel() {
   const voltar = () => setIndex((index - 1 + slidesData.length) % slidesData.length);
 
   return (
-    <section id={styles.carrosel}>
+    <section className={styles.carrosel}>
+      
       <section 
-        id="slides" 
+        className={styles.slides}
         style={{ 
-          display: "flex", 
           transform: `translateX(${-index * 100}%)`, 
           transition: "transform 0.5s ease-in-out" 
         }}
       >
         {slidesData.map((slide, i) => (
-          <a key={i} href={slide.href} className="slide-link" style={{ minWidth: "100%" }}>
-            <Image src={slide.src} alt={slide.alt} width={1200} height={400} layout="responsive" />
-          </a>
+          <Link key={i} href={slide.href} className={styles.slideLink}>
+            <Image 
+                src={slide.src} 
+                alt={slide.alt} 
+                width={1200} 
+                height={400} 
+                className={styles.imagem}
+                priority={i === 0}
+            />
+          </Link>
         ))}
       </section>
 
-      <button className="btn_carrosel" onClick={voltar}>Voltar</button>
-      <button className="btn_carrosel" onClick={avancar}>Avançar</button>
+      <button 
+        className={`${styles.btnCarrosel} ${styles.voltarBtn}`} 
+        onClick={voltar}>
+        {"<"}
+      </button>
+      
+      <button 
+        className={`${styles.btnCarrosel} ${styles.avancarBtn}`} 
+        onClick={avancar}>
+        {">"}
+      </button>
+
     </section>
   );
 }

@@ -1,0 +1,38 @@
+.container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto; 
+    font-family: sans-serif;
+}
+
+.cabecalho {
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #ff9900;
+    padding-bottom: 1rem;
+}
+
+.titulo {
+    font-size: 2rem;
+}
+
+.subtitulo {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    text-transform: capitalize;
+}
+
+.gradeProdutos {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+}
+
+.linkProduto {
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease;
+}
+
+.linkProduto:hover {
+    transform: translateY(-5px);
+}

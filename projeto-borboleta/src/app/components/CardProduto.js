@@ -19,7 +19,6 @@ export default function CardProduto({ produto }) {
             )}
             
             <h2 className={styles.titulo}>{produto.nome}</h2>
-            <p className={styles.descricao}>{produto.descricao}</p>
             <p className={styles.preco}>{produto.preco}</p>
         </div>
     );

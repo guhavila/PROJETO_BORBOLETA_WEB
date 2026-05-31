@@ -1,4 +1,4 @@
-"use client"; // Necessário para usar hooks como useState
+"use client";
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,9 +10,9 @@ export default function Header() {
   const toggleMenu = () => setMenuAtivo(!menuAtivo);
 
   return (
-    <header id={styles.Header}>
+    <header className={styles.Header}>
       <Link href="/">
-        <Image src="/Logo.png" alt="Logo" width={150} height={50} />
+        <Image src="/Logo.png" alt="Logo" width={150} height={50} priority/>
       </Link>
 
       <button className={styles.menuBtn} onClick={toggleMenu} aria-label="Abrir Menu">
