@@ -1,15 +1,21 @@
-/* components/CardProduto.module.css */
-
 .card {
     border: 1px solid #ccc;
     padding: 1rem;
     border-radius: 8px;
     width: 300px;
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.card:hover {
+    transform: translateY(-5px);
+} 
 
 .imagem {
     object-fit: cover;
-    width: 90%;
+    width: 100%;
     height: auto;
     border-radius: 4px;
 }
