@@ -5,9 +5,9 @@ import styles from "./Carrousel.module.css";
 import Link from "next/link";
 
 const slidesData = [
-  { href: "/", src: "/Tudo_para_sua_instalacao.png", alt: "Kits" },
-  { href: "/", src: "/slide_utencilios.png", alt: "Utensílios" },
-  { href: "/", src: "/slide_conheca.png", alt: "Formulário" },
+  { href: "/produtos/central-gas", src: "/slides/Tudo_para_sua_instalacao.png", alt: "Centrais de Gás" },
+  { href: "/produtos/fogoes", src: "/slides/slide_utencilios.png", alt: "Fogões Camping" },
+  { href: "/contato", src: "/slides/slide_conheca.png", alt: "Solicitar Orçamento" },
 ];
 
 export default function Carrousel() {

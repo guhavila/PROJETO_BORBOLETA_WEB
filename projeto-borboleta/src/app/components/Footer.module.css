@@ -1,5 +1,5 @@
 #Footer {
-    background-color: #333;
+    background-color: #1a2a4a;
     color: #fff;
     display: flex;
     justify-content: space-around;
@@ -11,12 +11,42 @@
 
 #Footer h3 {
     margin-bottom: 15px;
-    color: #ffcc00;
+    color: #3DD6C4;
 }
 
 #Footer p {
     margin-bottom: 8px;
     font-size: 0.95rem;
+}
+
+.infoEmpresa {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.logo {
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    margin-bottom: 4px;
+}
+
+.btnContato {
+    display: inline-block;
+    margin-top: 4px;
+    padding: 8px 18px;
+    background-color: #3DD6C4;
+    color: #1a2a4a;
+    font-weight: 700;
+    border-radius: 6px;
+    text-decoration: none;
+    width: fit-content;
+    transition: background-color 0.2s;
+}
+
+.btnContato:hover {
+    background-color: #5B90E0;
+    color: #fff;
 }
 
 @media (max-width: 800px) {

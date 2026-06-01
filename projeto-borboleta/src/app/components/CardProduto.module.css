@@ -13,21 +13,28 @@
     transform: translateY(-5px);
 } 
 
+.imagemBox {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
 .imagem {
     object-fit: cover;
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
+    border-radius: 8px;
 }
 
 .semImagem {
     width: 100%;
-    height: 200px;
-    background-color: #eee;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 4px;
+    color: #aaa;
+    font-size: 0.9rem;
 }
 
 .titulo {

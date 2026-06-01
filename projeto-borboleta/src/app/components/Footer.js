@@ -1,15 +1,19 @@
 import styles from "./Footer.module.css"
+import Image from "next/image"
+import Link from "next/link"
 
 export default function Footer() {
   return (
     <footer id={styles.Footer}>
-        <article className="info-empresa">
-          <h3>Canal Center</h3>
-          <p><i className="fas fa-map-marker-alt"></i> Rua Major Otaviano, 232 - SP</p>
-          <a href="/contato" className="btn-contato">Contate-nos</a>
+        <article className={styles.infoEmpresa}>
+          <Link href="/">
+            <Image src="/Logo.png" alt="Canal Center" width={160} height={55} className={styles.logo} />
+          </Link>
+          <p><i className="fas fa-map-marker-alt"></i> Rua Major Otaviano, 232, Andar 2 - SP</p>
+          <p><i className="fas fa-phone"></i> (11) 2958-0768</p>
+          <Link href="/contato" className={styles.btnContato}>Contate-nos</Link>
         </article>
     </footer>
-
   );
 }
 

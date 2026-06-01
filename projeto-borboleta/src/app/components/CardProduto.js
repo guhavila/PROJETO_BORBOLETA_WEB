@@ -4,19 +4,20 @@ import styles from './CardProduto.module.css';
 export default function CardProduto({ produto }) {
     return (
         <div className={styles.card}>
-            {produto.caminhoImg ? (
-                <Image 
-                    src={produto.caminhoImg} 
-                    alt={produto.nome} 
-                    width={300} 
-                    height={200}
-                    className={styles.imagem} 
-                />
-            ) : (
-                <div className={styles.semImagem}>
-                    Sem imagem
-                </div>
-            )}
+            <div className={styles.imagemBox}>
+                {produto.caminhoImg ? (
+                    <Image
+                        src={produto.caminhoImg}
+                        alt={produto.nome}
+                        fill
+                        className={styles.imagem}
+                    />
+                ) : (
+                    <div className={styles.semImagem}>
+                        Sem imagem
+                    </div>
+                )}
+            </div>
             
             <h2 className={styles.titulo}>{produto.nome}</h2>
             <p className={styles.preco}>{produto.preco}</p>

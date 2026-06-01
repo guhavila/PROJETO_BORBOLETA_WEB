@@ -2,7 +2,7 @@
 .Header {
     display: flex;
     padding: 0 30px;
-    background-color: rgb(254, 249, 236);
+    background-color: #EDF6FF;
     justify-content: space-between;
     align-items: center;
 }
@@ -80,7 +80,7 @@
         text-align: center;
         top: 100%;
         right: 0;
-        background-color: rgb(254, 249, 236);
+        background-color: #EDF6FF;
         width: 200px;
         box-shadow: -2px 5px 10px rgba(0,0,0,0.2);
         border-radius: 0 0 0 15px;

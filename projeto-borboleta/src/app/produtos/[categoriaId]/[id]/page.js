@@ -1,5 +1,6 @@
 'use client'
 import Image from "next/image";
+import Link from "next/link";
 import * as React from 'react'
 import { useEffect } from "react";
 import { useState } from "react";
@@ -28,7 +29,11 @@ export default function Categorias({ params }) {
     if (carregando) {
         return <h2 style={{ padding: "2rem" }}>Carregando produto...</h2>;
     }
-    
+
+    if (!produto) {
+        return <h2 style={{ padding: "2rem", textAlign: "center" }}>Produto não encontrado.</h2>;
+    }
+
     return(
         <main className={styles.container}>
             <section className={styles.produtoWrapper}>
@@ -43,7 +48,18 @@ export default function Categorias({ params }) {
                     <h1 className={styles.titulo}> {produto.nome} </h1>
                     <p className={styles.descricao}> {produto.descricao} </p>
                     <p className={styles.preco}> {produto.preco} </p>
-                    <button className={styles.botao}>Adicionar ao Carrinho</button>
+
+                    <div className={styles.caracteristicas}>
+                        <h3 className={styles.caracteristicasTitulo}>Características</h3>
+                        <div className={styles.caracteristicaItem}>
+                            <span className={styles.caracteristicaLabel}>Código do fornecedor</span>
+                            <span className={styles.caracteristicaValor}>{produto.codigoFornecedor}</span>
+                        </div>
+                    </div>
+
+                    <Link href="/contato">
+                        <button className={styles.botao}>Solicitar Orçamento</button>
+                    </Link>
                 </div>
             </section>
         </main>

@@ -63,7 +63,7 @@ export default function ContatoPage() {
               className={styles.input}
               name="nome"
               type="text"
-              placeholder="João da Silva"
+              placeholder="Fulano da Silva"
               required
             />
           </div>
@@ -75,7 +75,7 @@ export default function ContatoPage() {
                 className={styles.input}
                 name="email"
                 type="email"
-                placeholder="joao@empresa.com"
+                placeholder="fulano@empresa.com"
                 required
               />
             </div>
