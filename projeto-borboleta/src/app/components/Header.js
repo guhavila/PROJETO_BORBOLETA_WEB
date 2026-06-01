@@ -12,7 +12,7 @@ export default function Header() {
   return (
     <header className={styles.Header}>
       <Link href="/">
-        <Image src="/Logo.png" alt="Logo" width={150} height={50} priority/>
+        <Image src="/Logo.png" alt="Logo" width={150} height={80} priority/>
       </Link>
 
       <button className={styles.menuBtn} onClick={toggleMenu} aria-label="Abrir Menu">
