@@ -12,10 +12,19 @@ export default function Footer() {
     <footer id={styles.Footer}>
         <article className={styles.infoEmpresa}>
           <Link href="/">
-            <Image src="/Logo.png" alt="Canal Center" width={160} height={55} className={styles.logo} />
+            <Image src="/Logo.png" alt="Canal Center" width={1030} height={630} className={styles.logo} />
           </Link>
-          <p><i className="fas fa-map-marker-alt"></i> Rua Major Otaviano, 232, Andar 2 - SP</p>
-          <p><i className="fas fa-phone"></i> (11) 2958-0768</p>
+
+          <div className={styles.containerInfo}>
+            <Image src="/outros/location.png" height={64} width={64} alt="icone mapa"/>
+            <p> Rua Major Otaviano, 232, Andar 2 - SP</p>  
+          </div>
+
+          <div className={styles.containerInfo}>
+            <Image src="/outros/whatsapp.png" height={64} width={64} alt="icone Whatsapp"/>
+            <p> (11) 2958-0768</p>  
+          </div>
+          
           <Link href="/contato" className={styles.btnContato}>Contate-nos</Link>
         </article>
     </footer>

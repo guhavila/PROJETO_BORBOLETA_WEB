@@ -7,7 +7,7 @@
     background-color: #1a2a4a;
     color: #fff;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     padding: 40px 20px;
     margin-top: 50px;
     flex-wrap: wrap;
@@ -27,13 +27,33 @@
 .infoEmpresa {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 10px;
 }
 
 .logo {
     object-fit: contain;
     filter: brightness(0) invert(1);
+    height: 80px;
     margin-bottom: 4px;
+}
+
+
+.containerInfo {
+    display: flex;
+    align-items: center; /* Alinha a imagem e o texto exatamente no centro vertical */
+    gap: 8px; /* Adiciona um espaço limpo entre a imagem e o texto */
+    margin-bottom: 8px; /* Mantém o respiro entre as linhas de informação */
+}
+
+.containerInfo img { 
+    height: 1.1rem; 
+    width: 1.1rem; 
+    object-fit: contain; 
+}
+
+.containerInfo p {
+    margin-bottom: 0; 
 }
 
 .btnContato {
@@ -52,12 +72,4 @@
 .btnContato:hover {
     background-color: #5B90E0;
     color: #fff;
-}
-
-@media (max-width: 800px) {
-    #Footer {
-        flex-direction: column;
-        text-align: center; 
-        gap: 20px;
-    }
 }

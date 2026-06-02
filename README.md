@@ -78,3 +78,4 @@ Elas foram organizadas em diretorios dentro de "/public":
 - /public/imgCategorias: as imagens das categorias.
 - /public/imgProdutos: as imagens dos produtos.
 - /public/slides: os slides do carrossel.
+- /public/outros: outras imagens, como logo e icones.
