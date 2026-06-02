@@ -79,3 +79,9 @@ Elas foram organizadas em diretorios dentro de "/public":
 - /public/imgProdutos: as imagens dos produtos.
 - /public/slides: os slides do carrossel.
 - /public/outros: outras imagens, como logo e icones.
+---
+
+### Aprendizado durante o projeto
+Durante o desenvolvimento do nosso site, nós aprendemos que seguir as convenções e os sistemas estruturais do Next.js foi fundamental para organizar nosso fluxo de trabalho. Essa base sólida facilitou diretamente a integração de APIs para a implantação e alimentação do nosso catálogo de produtos — como a nossa mercadoria de gás com medidores de 1/4 e 3/8 —, garantindo que o consumo e a exibição desses dados fossem rápidos, seguros e fáceis de manter.
+
+Além da parte arquitetural, nós aprendemos a escalar o projeto construindo um design altamente interativo através das rotas dinâmicas, que geram as páginas de cada item automaticamente de forma fluida. Esse recurso, aliado à utilização do CSS em partes (modular), nos permitiu estilizar os componentes de forma isolada, o que evitou conflitos visuais no layout e tornou todo o procedimento de ajuste do projeto muito mais eficiente para a nossa equipe.
