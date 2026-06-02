@@ -12,7 +12,7 @@ export default function Footer() {
     <footer id={styles.Footer}>
         <article className={styles.infoEmpresa}>
           <Link href="/">
-            <Image src="/Logo.png" alt="Canal Center" width={1030} height={630} className={styles.logo} />
+            <Image src="/Logo.png" alt="Canal Center" width={1030} height={630} priority className={styles.logo} />
           </Link>
 
           <div className={styles.containerInfo}>

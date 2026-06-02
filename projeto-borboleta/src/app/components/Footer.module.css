@@ -34,16 +34,17 @@
 .logo {
     object-fit: contain;
     filter: brightness(0) invert(1);
-    height: 80px;
+    height: auto;
+    width: 100px;
     margin-bottom: 4px;
 }
 
 
 .containerInfo {
     display: flex;
-    align-items: center; /* Alinha a imagem e o texto exatamente no centro vertical */
-    gap: 8px; /* Adiciona um espaço limpo entre a imagem e o texto */
-    margin-bottom: 8px; /* Mantém o respiro entre as linhas de informação */
+    align-items: center; 
+    gap: 8px; 
+    margin-bottom: 8px;
 }
 
 .containerInfo img { 
