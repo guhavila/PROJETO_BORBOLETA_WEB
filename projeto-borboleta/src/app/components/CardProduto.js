@@ -15,7 +15,9 @@ export default function CardProduto({ produto }) {
                         src={produto.caminhoImg}
                         alt={produto.nome}
                         fill
+                        sizes="300px, 300px"
                         className={styles.imagem}
+                        priority
                     />
                 ) : (
                     <div className={styles.semImagem}>

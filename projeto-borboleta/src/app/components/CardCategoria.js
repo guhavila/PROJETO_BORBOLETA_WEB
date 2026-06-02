@@ -17,7 +17,9 @@ export default function CardCategoria({ categoria }) {
                             src={categoria.caminhoImg}
                             alt={categoria.nome}
                             fill
+                            sizes="300px, 300px"
                             className={styles.imagem}
+                            priority
                         />
                     ) : (
                         <div className={styles.semImagem}>
