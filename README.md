@@ -10,156 +10,71 @@ Repositório para a segunda etapa do projeto de Web Mobile
 
 # Projeto: E-commerce de Acessórios de Gás
 
-## 📌 Visão Geral
+## Visão Geral
 Este projeto consiste no desenvolvimento de um site de e-commerce focado na venda de acessórios de gás. A plataforma oferece navegação simples, rápida e intuitiva, permitindo que os usuários encontrem facilmente os produtos desejados e solicitem orçamentos.
 
-## 🎯 Objetivos
-- Exibir produtos organizados por categorias
-- Facilitar a navegação e busca por itens específicos
-- Criar uma experiência visual moderna e responsiva
-- Direcionar o usuário rapidamente para os produtos de interesse
+## Caráter extensionista
+O projeto cumpre o papel extensionista ao promover a inovação tecnológica em uma empresa sem divulgação social, conectando de forma eficiente a distribuidora, construtoras e o consumidor final. A plataforma amplifica o acesso ao público em que ao mesmo tempo fornece ao usuário informações técnicas, auxiliando o consumidor doméstico e lojistas na escolha de produtos de qualidade e segurança com serviços eficientes e transparentes. Ao oferecer uma forma de visualização de produtos referentes a instalação de gás mais expostos e intuitivos em um site, será feita uma conscientização de uso adequado e da necessidade dos compradores e interessados.
+Ao entrar em contato com a empresa, um obstáculo na hora de captar novos clientes é a falta de uma apresentação do catálogo extenso para novos clientes e até clientes recorrentes. Nesse projeto o objetivo é ajudar a empresa montando um cartão de visitas para expor o que a distribuidora realmente tem a oferecer no mercado.
 
 ---
 
-## 🗂️ Banco de Dados
+## Tutorial do projeto
 
-Os dados do site ficam em `src/lib/db.js`. O arquivo exporta um objeto com dois arrays:
-- `categorias` — cada item tem `id`, `nome`, `descricao` e `caminhoImg`
-- `produtos` — cada item tem `id`, `categoriaId`, `nome`, `descricao`, `preco`, `caminhoImg` e `codigoFornecedor`
+### API
+A chamada do get da api retornará um objeto do src/lib/db.js contendo 2 listas nele, cada lista é composta por outros objetos dentro: categoria e produtos.
 
-Para adicionar ou editar produtos e categorias basta mexer nesse arquivo.
+A lista de categorias contém as categorias dos produtos contidos em objetos, dentro de cada objeto tem o id da categoria, nome da categoria, descrição e o caminho da imagem de cada categoria da loja.
+<img width="886" height="303" alt="image" src="https://github.com/user-attachments/assets/70d16c07-f8e2-4d8f-8071-5815d2930db9" />
 
-`src/lib/db.js`, linha 1–141
-
----
-
-## 🔌 API
-
-A API é uma Route Handler do Next.js que lê o `db.js` e retorna os dados em JSON.
-
-**GET /api/produtos** — retorna todas as categorias e produtos  
-`src/app/api/produtos/route.js`, linha 1–5
-
-**GET /api/produtos/[id]** — retorna um produto pelo ID  
-`src/app/api/produtos/[id]/route.js`, linha 1–10
+A lista de produtos contém todos os produtos contidos em objetos, dentro de cada objeto tem o id do produto, o id da categoria que esse produto pertence, nome do produto, descrição, preço, caminho da imagem e o código do fornecedor. 
+<img width="886" height="348" alt="image" src="https://github.com/user-attachments/assets/61fd2484-006d-45cb-8e1e-f539f28d7b17" />
 
 ---
 
-## 🖥️ Estrutura das Páginas
+### Componentes do site:
+O site é composto por diversos componentes como o Header, Footer, Carrossel, CardProduto e CardCategoria e seus respectivos módulos css.
 
-### 1. Layout Global
-Envolve todas as páginas. Define o título da aba ("Canal Center"), importa o CSS global e renderiza o Header e Footer em torno do conteúdo.
+#### 1. Header e Footer
+O Header contém a logo e o link com o acesso a outras rotas do site. Quando a largura do site fica menor que 800px, ele transforma os links em um menu hamburguer.
+O Footer contém a logo e as informações referentes a empresa, além de levar para rota de contato.
 
-`src/app/layout.js`, linha 1–35
+Tanto o Header, quanto o Footer forem adicionados no Layout.js, para que sempre que for acessado uma nova rota, não precisar recarregar eles, além de facilitar com a reutilização do código.
+<img width="886" height="368" alt="image" src="https://github.com/user-attachments/assets/e6edf436-a3dc-46f6-a689-03fa0bc97530" />
 
----
-
-### 2. Header
-Localizado no topo de todas as páginas. Contém a logo clicável (link para a home), menu hambúrguer para mobile e links de navegação: Home, Produtos e Contato.
-
-`src/app/components/Header.js`, linha 1–31  
-`src/app/components/Header.module.css`
-
----
-
-### 3. Home Page
-Busca as categorias via API e as exibe em cards clicáveis. Cada card redireciona para a página de produtos daquela categoria. Acima das categorias há um carrossel de banners.
-
-`src/app/page.js`, linha 1–38  
-`src/app/page.module.css`
-
----
-
-### 4. Carrossel
+#### 2. Carrossel
 Exibe 3 slides com navegação por botões. Cada slide é um link:
-- Slide 1 → Central de Gás (`/produtos/central-gas`)
-- Slide 2 → Fogões Camping (`/produtos/fogoes`)
-- Slide 3 → Formulário de contato (`/contato`)
+- Slide 1 → Central de Gás ("/produtos/central-gas")
+- Slide 2 → Fogões Camping ("/produtos/fogoes")
+- Slide 3 → Formulário de contato ("/contato")
 
-As imagens ficam em `public/slides/`.
+As imagens ficam em "public/slides/".
 
-`src/app/components/Carrousel.js`, linha 1–57  
-`src/app/components/Carrousel.module.css`
-
----
-
-### 5. Card de Categoria
-Componente reutilizável exibido na home. Mostra imagem em box fixo (300×200), nome e descrição da categoria.
-
-`src/app/components/CardCategoria.js`, linha 1–28  
-`src/app/components/CardCategoria.module.css`
+#### 3. CardProduto e CardCategoria
+Os componentes CardProduto e CardCategoria exibem os conteúdos do objeto recebido através do Props.
 
 ---
 
-### 6. Página de Categoria (Lista de Produtos)
-Rota dinâmica que recebe o `categoriaId` pela URL. Filtra e exibe os produtos daquela categoria em cards clicáveis. Aceita também `/produtos/todos` para exibir todos os produtos.
+### Rotas simples e dinâmica:
+A rota simples é a de contato ("/contato"), onde dispõe de um formulário para o preenchimento do orçamento
 
-`src/app/produtos/[categoriaId]/page.js`, linha 1–75  
-`src/app/produtos/[categoriaId]/page.module.css`
+As rotas dinâmicas são referentes a página da categoria dos produtos e do produto em si.
+A rota de [categoriaId] ("/produtos/[categoriaId]") usa o useEffect no cliente side para executar a função que chama a API para pegar categorias e produtos. 
+<img width="886" height="504" alt="image" src="https://github.com/user-attachments/assets/ba9d4796-077d-4a1b-82ed-2968c0b65a42" />
 
----
+Usando o categoriaId do params, ele compara e pega o nome da categoria do objeto da lista de categorias para exibir na pagina.
+Ele também utiliza um filter na lista de objetos produtos, onde compara o id da categoria do produto com o id da rota da url, retornando todos os produtos pertencente aquela categoria. Se o id for “todos”, ele ignora esse filter e retorna todos os produtos, independente da categoria.
+Ultilizamos o .length na lista que o filter retornou (ou diretamente na lista com os produtos, caso o id seja "todos"), para mostrar a quantidade de itens daquela categoria.
+<img width="886" height="463" alt="image" src="https://github.com/user-attachments/assets/ad3e80ef-b111-4ffd-ba6f-ec4def785964" />
 
-### 7. Card de Produto
-Componente reutilizável exibido na listagem de produtos. Mostra imagem em box fixo (300×200), nome e preço do produto.
-
-`src/app/components/CardProduto.js`, linha 1–25  
-`src/app/components/CardProduto.module.css`
-
----
-
-### 8. Página de Produto
-Rota dinâmica que recebe o `id` do produto pela URL. Exibe imagem, nome, descrição, preço, código do fornecedor e botão "Solicitar Orçamento" que redireciona para o formulário de contato.
-
-`src/app/produtos/[categoriaId]/[id]/page.js`, linha 1–67  
-`src/app/produtos/[categoriaId]/[id]/page.module.css`
+Na rota de [id] ("/produtos/[categoriaId]/[id]"), ele mostra todas as informações do produto em específico que for solicitado pelo id dele e clicando no button, direciona o usuário para a rota de contato para fazer o orçamento.
+<img width="886" height="368" alt="image" src="https://github.com/user-attachments/assets/64185765-8582-4a8c-8698-51a2c7066ad0" />
 
 ---
 
-### 9. Formulário de Contato
-Página com formulário de solicitação de orçamento. Possui campos de nome, e-mail, telefone, CPF/CNPJ (com formatação automática), nome da empresa (exibido apenas para CNPJ) e descrição do projeto. Ao enviar, exibe uma mensagem de confirmação.
+### Estrutura das imagens
 
-`src/app/contato/page.js`, linha 1–152  
-`src/app/contato/contato.module.css`
-
----
-
-### 10. Footer
-Exibe a logo (link para a home), endereço, telefone e botão "Contate-nos" que leva ao formulário.
-
-`src/app/components/Footer.js`, linha 1–18  
-`src/app/components/Footer.module.css`
-
----
-
-## 🔀 Navegação e Rotas
-
-| Rota | Descrição |
-|---|---|
-| `/` | Home — carrossel + categorias |
-| `/produtos/todos` | Lista todos os produtos |
-| `/produtos/[categoriaId]` | Lista produtos de uma categoria |
-| `/produtos/[categoriaId]/[id]` | Detalhe de um produto |
-| `/contato` | Formulário de orçamento |
-
----
-
-## 🗃️ Estrutura de Pastas
-
-```
-projeto-borboleta/
-├── public/
-│   ├── Logo.png
-│   ├── slides/          # Imagens do carrossel
-│   ├── imgCategorias/   # Imagens das categorias
-│   └── imgProdutos/     # Imagens dos produtos
-├── src/
-│   ├── lib/
-│   │   └── db.js        # Dados (categorias e produtos)
-│   └── app/
-│       ├── api/produtos/ # API Routes
-│       ├── components/   # Header, Footer, Cards, Carrossel
-│       ├── produtos/     # Páginas de categoria e produto
-│       ├── contato/      # Formulário de orçamento
-│       ├── globals.css
-│       └── layout.js
-```
+Elas foram organizadas em diretorios dentro de "/public":
+- /public/imgCategorias: as imagens das categorias.
+- /public/imgProdutos: as imagens dos produtos.
+- /public/slides: os slides do carrossel.
